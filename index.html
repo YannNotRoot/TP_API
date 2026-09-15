@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TP 01 - API RandomUser</title>
+    <!-- Stylesheet CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Flag -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+
+</head>
+<body class="bg-light p-4">
+
+    <div class="container">
+        <h1 class="mb-4">Liste des utilisateurs</h1>
+
+        <!-- Tableau -->
+        <table class="table table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Username</th>
+                    <th>Genre</th>
+                    <th>Nom</th>
+                    <th>Photo</th>
+                    <th>Ville</th>
+                    <th>Pays</th>
+                </tr>
+            </thead>
+            <!-- Le JS viendra remplir cet endroit -->
+            <tbody id="table-users"></tbody>
+        </table>
+    </div>
+
+    <!-- 2. On lie notre fichier JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

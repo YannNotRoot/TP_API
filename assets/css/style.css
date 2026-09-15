@@ -1,0 +1,47 @@
+.user-photo {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    backface-visibility: visible;
+    transition: transform 0.3s ease;
+}
+
+@keyframes envolPiece {
+    /* 0s à 15s : Rotation avec accélération progressive */
+    0% {
+        transform: scale(1.8) translateY(0) rotateY(0deg);
+        opacity: 1;
+    }
+    83.33% { /* 15s */
+        transform: scale(1.8) translateY(0) rotateY(10800deg);
+        opacity: 1;
+    }
+
+    /* 15s à 16.5s : Envol vers le HAUT */
+    91.66% {
+        transform: scale(1) translateY(-120vh) rotateY(11800deg);
+        opacity: 0;
+    }
+
+    /* Repositionnement en haut */
+    92% {
+        transform: scale(1) translateY(-120vh) rotateY(11800deg);
+        opacity: 0;
+    }
+
+    /* 16.5s à 18s : Atterrissage depuis le HAUT */
+    100% {
+        transform: scale(1) translateY(0) rotateY(12600deg);
+        opacity: 1;
+    }
+}
+
+/* Animation déclenchée au survol */
+.user-photo.animating {
+    animation: envolPiece 18s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    position: relative;
+}
